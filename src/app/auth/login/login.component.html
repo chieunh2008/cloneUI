@@ -1,0 +1,21 @@
+<nz-card style="width: 360px; margin: auto; margin-top: 100px;" nzTitle="Đăng nhập" [nzBordered]="false">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Vui lòng nhập tài khoản">
+        <input nz-input formControlName="username" placeholder="Tài khoản" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <nz-form-control nzErrorTip="Vui lòng nhập mật khẩu">
+        <input nz-input type="password" formControlName="password" placeholder="Mật khẩu" />
+      </nz-form-control>
+    </nz-form-item>
+
+    <nz-form-item>
+      <button nz-button nzType="primary" [disabled]="form.invalid" style="width: 100%">
+        Đăng nhập
+      </button>
+    </nz-form-item>
+  </form>
+</nz-card>

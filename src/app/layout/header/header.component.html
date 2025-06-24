@@ -1,0 +1,12 @@
+<nz-dropdown nzTrigger="click" [nzDropdownMenu]="userMenu">
+  <div class="user-info">
+    <i nz-icon nzType="user" nzTheme="outline"></i>
+    <span class="user-name">{{ username }}</span>
+  </div>
+</nz-dropdown>
+
+<nz-dropdown-menu #userMenu="nzDropdownMenu">
+  <ul nz-menu>
+    <li nz-menu-item (click)="logout()">Đăng xuất</li>
+  </ul>
+</nz-dropdown-menu>
